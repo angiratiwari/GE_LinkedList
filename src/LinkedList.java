@@ -72,6 +72,11 @@ public class LinkedList <T extends Comparable<T>> {
         return false;
     }
 
+    // UC8: Insert after a specific node
+    public void insertAfterKey(T key, T data) {
+        insertAfter(key, data);
+    }
+
     // Print the LinkedList
     public void printList() {
         Node<T> temp = head;
