@@ -19,6 +19,10 @@ public class LinkedList <T extends Comparable<T>> {
         newNode.next = head;
         head = newNode;
     }
+    // UC3: Append nodes
+    public void append(T data) {
+        add(data);
+    }
 
     // Print the LinkedList
     public void printList() {
