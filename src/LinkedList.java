@@ -77,6 +77,35 @@ public class LinkedList <T extends Comparable<T>> {
         insertAfter(key, data);
     }
 
+    // UC9: Delete a specific node
+    public boolean delete(T key) {
+        if (head == null) return false;
+        if (head.data.equals(key)) {
+            head = head.next;
+            return true;
+        }
+        Node<T> temp = head;
+        while (temp.next != null && !temp.next.data.equals(key)) {
+            temp = temp.next;
+        }
+        if (temp.next != null) {
+            temp.next = temp.next.next;
+            return true;
+        }
+        return false;
+    }
+
+    // Get size of the LinkedList
+    public int size() {
+        int count = 0;
+        Node<T> temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
     // Print the LinkedList
     public void printList() {
         Node<T> temp = head;
