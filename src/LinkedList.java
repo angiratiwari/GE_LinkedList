@@ -45,6 +45,24 @@ public class LinkedList <T extends Comparable<T>> {
         return data;
     }
 
+    // UC6: Delete the last element
+    public T popLast() {
+        if (head == null) return null;
+        if (head.next == null) {
+            T data = head.data;
+            head = null;
+            return data;
+        }
+        Node<T> temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        T data = temp.next.data;
+        temp.next = null;
+        return data;
+    }
+
+
     // Print the LinkedList
     public void printList() {
         Node<T> temp = head;

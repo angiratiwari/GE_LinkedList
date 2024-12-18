@@ -31,5 +31,9 @@ public class Main {
         // UC5
         list.pop();
         list.printList(); // Output: 30 -> 40 -> 70 -> null
+
+        // UC6
+        list.popLast();
+        list.printList(); // Output: 30 -> 40 -> null
     }
 }
