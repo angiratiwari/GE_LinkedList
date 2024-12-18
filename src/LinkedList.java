@@ -106,6 +106,22 @@ public class LinkedList <T extends Comparable<T>> {
         return count;
     }
 
+    // UC10: Create an ordered LinkedList
+    public void addSorted(T data) {
+        Node<T> newNode = new Node<>(data);
+        if (head == null || head.data.compareTo(data) > 0) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            Node<T> temp = head;
+            while (temp.next != null && temp.next.data.compareTo(data) < 0) {
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+    }
+
     // Print the LinkedList
     public void printList() {
         Node<T> temp = head;

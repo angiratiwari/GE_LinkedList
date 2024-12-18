@@ -47,5 +47,13 @@ public class Main {
         list.delete(40);
         System.out.println("Size: " + list.size()); // Output: Size: 1
         list.printList(); // Output: 30 -> null
+
+        // UC10
+        LinkedList<Integer> sortedList = new LinkedList<>();
+        sortedList.addSorted(56);
+        sortedList.addSorted(30);
+        sortedList.addSorted(40);
+        sortedList.addSorted(70);
+        sortedList.printList(); // Output: 30 -> 40 -> 56 -> 70 -> nul
     }
 }
