@@ -13,6 +13,12 @@ public class LinkedList <T extends Comparable<T>> {
             temp.next = newNode;
         }
     }
+    // UC2: Add nodes in reverse order
+    public void addFirst(T data) {
+        Node<T> newNode = new Node<>(data);
+        newNode.next = head;
+        head = newNode;
+    }
 
     // Print the LinkedList
     public void printList() {
