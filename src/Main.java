@@ -16,5 +16,12 @@ public class Main {
         list2.addFirst(30);
         list2.addFirst(56);
         list2.printList(); // Output: 56 -> 30 -> 70 -> null
+
+        // UC3
+        LinkedList<Integer> list3 = new LinkedList<>();
+        list3.add(56);
+        list3.append(30);
+        list3.append(70);
+        list3.printList(); // Output: 56 -> 30 -> 70 -> nul
     }
 }
