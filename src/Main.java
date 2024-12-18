@@ -23,5 +23,10 @@ public class Main {
         list3.append(30);
         list3.append(70);
         list3.printList(); // Output: 56 -> 30 -> 70 -> nul
+
+        // UC4
+        list.insertAfter(30, 40);
+        list.printList(); // Output: 56 -> 30 -> 40 -> 70 -> null
+
     }
 }
