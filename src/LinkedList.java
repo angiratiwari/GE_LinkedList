@@ -62,6 +62,15 @@ public class LinkedList <T extends Comparable<T>> {
         return data;
     }
 
+    // UC7: Search for a node
+    public boolean search(T key) {
+        Node<T> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(key)) return true;
+            temp = temp.next;
+        }
+        return false;
+    }
 
     // Print the LinkedList
     public void printList() {
