@@ -38,5 +38,9 @@ public class Main {
 
         // UC7
         System.out.println(list.search(30)); // Output: true
+
+        // UC8
+        list.insertAfterKey(30, 40);
+        list.printList(); // Output: 30 -> 40 -> null
     }
 }
