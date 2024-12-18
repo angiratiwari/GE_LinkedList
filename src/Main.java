@@ -28,5 +28,8 @@ public class Main {
         list.insertAfter(30, 40);
         list.printList(); // Output: 56 -> 30 -> 40 -> 70 -> null
 
+        // UC5
+        list.pop();
+        list.printList(); // Output: 30 -> 40 -> 70 -> null
     }
 }

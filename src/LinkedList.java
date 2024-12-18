@@ -37,6 +37,14 @@ public class LinkedList <T extends Comparable<T>> {
         }
     }
 
+    // UC5: Delete the first element
+    public T pop() {
+        if (head == null) return null;
+        T data = head.data;
+        head = head.next;
+        return data;
+    }
+
     // Print the LinkedList
     public void printList() {
         Node<T> temp = head;
