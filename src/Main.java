@@ -35,5 +35,8 @@ public class Main {
         // UC6
         list.popLast();
         list.printList(); // Output: 30 -> 40 -> null
+
+        // UC7
+        System.out.println(list.search(30)); // Output: true
     }
 }
