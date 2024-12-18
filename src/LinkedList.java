@@ -24,6 +24,19 @@ public class LinkedList <T extends Comparable<T>> {
         add(data);
     }
 
+    // UC4: Insert node at specific position
+    public void insertAfter(T key, T data) {
+        Node<T> temp = head;
+        while (temp != null && !temp.data.equals(key)) {
+            temp = temp.next;
+        }
+        if (temp != null) {
+            Node<T> newNode = new Node<>(data);
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+    }
+
     // Print the LinkedList
     public void printList() {
         Node<T> temp = head;
