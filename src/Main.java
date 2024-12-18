@@ -42,5 +42,10 @@ public class Main {
         // UC8
         list.insertAfterKey(30, 40);
         list.printList(); // Output: 30 -> 40 -> null
+
+        // UC9
+        list.delete(40);
+        System.out.println("Size: " + list.size()); // Output: Size: 1
+        list.printList(); // Output: 30 -> null
     }
 }
